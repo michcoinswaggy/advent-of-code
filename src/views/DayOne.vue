@@ -1,6 +1,9 @@
 <template>
     <div class="">
         <h1>Day 1</h1>
+        Part one : {{ dayOnePartOne() }}
+        <hr>
+        Part two : {{ dayOnePartTwo() }}
     </div>
 </template>
 
@@ -212,6 +215,32 @@
                     1667
                 ]
             }
+        },
+        methods: {
+            dayOnePartOne() {
+                for (let i = 0; i < this.adventOfCodeInput.length-1; i++) {
+                    for (let j = i+1; j < this.adventOfCodeInput.length; j++) {
+                        if (this.adventOfCodeInput[i] + this.adventOfCodeInput[j] == 2020) {
+                            return this.adventOfCodeInput[i] * this.adventOfCodeInput[j];
+                        }
+                    }
+                }
+            },
+            dayOnePartTwo() {
+                for (let i = 0; i < this.adventOfCodeInput.length-2; i++) {
+                    for (let j = i+1; j < this.adventOfCodeInput.length-1; j++) {
+                        if (this.adventOfCodeInput[i] + this.adventOfCodeInput[j] > 2020) {
+                            continue;
+                        }
+                        for (let k = j+1; k < this.adventOfCodeInput.length; k++) {
+                            if (this.adventOfCodeInput[i] + this.adventOfCodeInput[j] + this.adventOfCodeInput[k] == 2020) {
+                                return this.adventOfCodeInput[i] * this.adventOfCodeInput[j] * this.adventOfCodeInput[k];
+                            }
+                        }
+                    }
+                }
+            },
+
         }
     }
 </script>
