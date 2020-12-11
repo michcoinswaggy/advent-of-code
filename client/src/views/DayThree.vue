@@ -1,7 +1,7 @@
 <template>
     <div class="day">
         <h1>Day Three</h1>
-        Part one : {{ partOne }}
+        Part one : {{ solve3to1 }}
         <hr>
         Part two : {{ getPartTwo() }}
     </div>
@@ -32,7 +32,7 @@
 
             let data1 = { right: 1, down: 1 };
 
-            Vue.axios.post('http://localhost:3000/api/days/3part2', data1)
+            Vue.axios.post('http://localhost:3000/api/days/3', data1)
             .then(response => {
                 this.solve1to1 = response.data.message;
             })
@@ -42,7 +42,9 @@
 
             // -----------------------------------------------------------------
 
-            Vue.axios.get('http://localhost:3000/api/days/3part1')
+            let data5 = { right: 3, down: 1 };
+
+            Vue.axios.post('http://localhost:3000/api/days/3', data5)
             .then(response => {
                 this.solve3to1 = response.data.message;
                 this.partOne = this.solve3to1;
@@ -55,7 +57,7 @@
 
             let data2 = { right: 5, down: 1 }
 
-            Vue.axios.post('http://localhost:3000/api/days/3part2', data2)
+            Vue.axios.post('http://localhost:3000/api/days/3', data2)
             .then(response => {
                 this.solve5to1 = response.data.message;
             })
@@ -67,7 +69,7 @@
 
             let data3 = { right: 7, down: 1 };
 
-            Vue.axios.post('http://localhost:3000/api/days/3part2', data3)
+            Vue.axios.post('http://localhost:3000/api/days/3', data3)
             .then(response => {
                 this.solve7to1 = response.data.message;
             })
@@ -79,14 +81,13 @@
 
             let data4 = { right: 1, down: 2 };
 
-            Vue.axios.post('http://localhost:3000/api/days/3part2', data4)
+            Vue.axios.post('http://localhost:3000/api/days/3', data4)
             .then(response => {
                 this.solve1to2 = response.data.message;
             })
             .catch(e => {
                 return e;
             });
-
 
         }
     }

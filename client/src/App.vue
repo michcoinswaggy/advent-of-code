@@ -5,7 +5,10 @@
       <br>
       <router-link to="/dayone">Day One</router-link> |
       <router-link to="/daytwo">Day Two</router-link> |
-      <router-link to="/daythree">Day Three</router-link>
+      <router-link to="/daythree">Day Three</router-link> |
+      <router-link to="/dayfour">Day Four</router-link> |
+      <router-link to="/dayfive">Day Five</router-link> |
+
     </div>
     <router-view/>
   </div>
