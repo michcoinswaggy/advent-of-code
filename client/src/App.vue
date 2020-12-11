@@ -9,6 +9,8 @@
       <router-link to="/dayfour">Day Four</router-link> |
       <router-link to="/dayfive">Day Five</router-link> |
       <router-link to="/daysix">Day Six</router-link> |
+      <router-link to="/dayseven">Day Seven</router-link> |
+      <router-link to="/dayeight">Day Eight</router-link> |
 
     </div>
     <router-view/>
