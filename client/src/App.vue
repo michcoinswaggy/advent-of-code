@@ -13,6 +13,8 @@
       <router-link to="/dayeight">Day Eight</router-link> |
       <br>
       <router-link to="/daynine">Day Nine</router-link> |
+      <router-link to="/todo">TODO</router-link> |
+      <router-link to="/dayeleven">Day Eleven</router-link> |
 
     </div>
     <router-view/>
