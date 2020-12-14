@@ -48,9 +48,52 @@ function rotate(actualFacing, turn, rotationDegree) {
 
 
 exports.getPartTwo = (req, res, next) => {
+    let wayPointEastWest = 10;
+    let wayPointNorthSouth = 1;
+    let shipX = 0;
+    let shipY = 0;
+
     lineReader.eachLine('./inputs/day12/day12.txt', function(line, last) {
+        let instruction = line.charAt(0);
+        let units = parseInt(line.substring(1));
+
+        if (instruction === "N") {
+            wayPointNorthSouth += units;
+        } else if (instruction === "S") {
+            wayPointNorthSouth -= units;
+        } else if (instruction === "E") {
+            wayPointEastWest += units;
+        } else if (instruction === "W") {
+            wayPointEastWest -= units;
+        } else if (instruction === "R" || instruction === "L") {
+            [wayPointEastWest, wayPointNorthSouth] = rotateWayPoint(instruction, units, wayPointEastWest, wayPointNorthSouth);
+        } else if (instruction === "F") {
+            shipX += wayPointEastWest * units;
+            shipY += wayPointNorthSouth * units;
+        }
+
         if (last) {
-            return res.status(200).json({ message: "coucou" });
+            let manhattanDistance = Math.abs(shipX) + Math.abs(shipY);
+            return res.status(200).json({ message: manhattanDistance });
         }
     });
+}
+
+function rotateWayPoint(instruction, rotationDegree, wayPointEastWest, wayPointNorthSouth) {
+    if (instruction === "L") {
+        rotationDegree = 360 - rotationDegree;
+    }
+
+    let moveInt = rotationDegree;
+    while (moveInt > 0) {
+        let oldNorthSouth = wayPointNorthSouth;
+        let oldEastWest = wayPointEastWest;
+
+        wayPointEastWest = oldNorthSouth;
+        wayPointNorthSouth = -oldEastWest;
+
+        moveInt -= 90;
+    }
+
+    return [wayPointEastWest, wayPointNorthSouth];
 }
