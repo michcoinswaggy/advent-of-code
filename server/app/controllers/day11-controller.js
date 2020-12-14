@@ -93,7 +93,7 @@ exports.getPartTwo = (req, res, next) => {
     lineReader.eachLine('./inputs/day11/day11.txt', function(line, last) {
         grid.push(line);
         if (last) {
-            return res.status(200).json({ message: "coucou11" });
+            return res.status(200).json({ message: "TODO" });
         }
     });
 }
