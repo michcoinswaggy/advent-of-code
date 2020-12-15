@@ -70,6 +70,16 @@ const routes = [
     name: 'DayTwelve',
     component: () => import(/* webpackChunkName: "about" */ '../views/DayTwelve.vue')
   },
+  {
+    path: '/daythirteen',
+    name: 'DayThirteen',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DayThirteen.vue')
+  },
+  {
+    path: '/dayfourteen',
+    name: 'DayFourteen',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DayFourteen.vue')
+  },
 ]
 
 const router = new VueRouter({
