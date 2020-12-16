@@ -61,6 +61,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/DayNine.vue')
   },
   {
+    path: '/dayten',
+    name: 'DayTen',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DayTen.vue')
+  },
+  {
     path: '/dayeleven',
     name: 'DayEleven',
     component: () => import(/* webpackChunkName: "about" */ '../views/DayEleven.vue')
@@ -79,6 +84,11 @@ const routes = [
     path: '/dayfourteen',
     name: 'DayFourteen',
     component: () => import(/* webpackChunkName: "about" */ '../views/DayFourteen.vue')
+  },
+  {
+    path: '/dayfifteen',
+    name: 'DayFifteen',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DayFifteen.vue')
   },
 ]
 

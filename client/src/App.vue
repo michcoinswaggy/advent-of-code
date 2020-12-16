@@ -9,15 +9,16 @@
             <router-link style="color: green" to="/dayfour">Day Four</router-link> |
             <router-link style="color: green" to="/dayfive">Day Five</router-link> |
             <router-link style="color: green" to="/daysix">Day Six</router-link> |
-            <router-link to="/dayseven" style="color: red">TODO</router-link> |
+            <router-link to="/dayseven" style="color: red">Day seven (TODO)</router-link> |
             <router-link style="color: green" to="/dayeight">Day Eight</router-link> |
             <br>
             <router-link style="color: green" to="/daynine">Day Nine</router-link> |
-            <router-link to="/todo" style="color: red">TODO</router-link> |
+            <router-link style="color: red" to="/dayten">Day Ten (to finish)</router-link> |
             <router-link style="color: green" to="/dayeleven">Day Eleven</router-link> |
             <router-link style="color: green" to="/daytwelve">Day Twelve</router-link> |
             <router-link style="color: red" to="/daythirteen">Day Thirteen (to finish)</router-link> |
-            <router-link style="color: red" to="/dayfourteen">Day Fourteen (todo)</router-link> |
+            <router-link style="color: green" to="/dayfourteen">Day Fourteen</router-link> |
+            <router-link style="color: green" to="/dayfifteen">Day Fifteen</router-link> |
         </div>
         <router-view/>
     </div>
