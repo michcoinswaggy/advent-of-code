@@ -19,6 +19,8 @@
             <router-link style="color: red" to="/daythirteen">Day Thirteen (to finish)</router-link> |
             <router-link style="color: green" to="/dayfourteen">Day Fourteen</router-link> |
             <router-link style="color: green" to="/dayfifteen">Day Fifteen</router-link> |
+            <br>
+            <router-link style="color: red" to="/daysixteen">Day Sixteen</router-link> |
         </div>
         <router-view/>
     </div>
