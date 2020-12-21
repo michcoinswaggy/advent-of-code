@@ -14,6 +14,7 @@ const day12 = require("../controllers/day12-controller.js");
 const day13 = require("../controllers/day13-controller.js");
 const day14 = require("../controllers/day14-controller.js");
 const day15 = require("../controllers/day15-controller.js");
+const day16 = require("../controllers/day16-controller.js");
 
 router.post("/3", day3.getDayThree);
 
@@ -52,5 +53,8 @@ router.get("/14part2", day14.getPartTwo);
 
 router.get("/15part1", day15.getPartOne);
 router.get("/15part2", day15.getPartTwo);
+
+router.get("/16part1", day16.getPartOne);
+router.get("/16part2", day16.getPartTwo);
 
 module.exports = router;
